@@ -1,0 +1,32 @@
+SELECT * FROM our_helltrain.product;
+
+INSERT INTO product (
+    user_id,
+    product_name,
+    description,
+    price,
+    img_path,
+    type,
+    shelf_date,
+    product_condition,
+    status,
+    grade,
+    location,
+    dept_group
+)
+VALUES
+(
+    11,
+    '男哥的筆記♥',
+    '陳建男老師親編筆記 後端轉職必讀 ! 幫助你 once again, 事業亨通 ! ',
+    100000,
+    '["https://picsum.photos/300/200?random=666"]',
+    '["教科書","課本","筆記考古"]',
+    '2026-06-04',
+    '重度使用',
+    '尚未出售',
+    '不分年級',
+    '["高雄市", "台南市"]',
+    '["資訊學群"]'
+)
+

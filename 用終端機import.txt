@@ -1,0 +1,3 @@
+用終端機import
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p our_helltrain < "C:\Our_Helltrain_SQL\HellTrain.sql"

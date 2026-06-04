@@ -1,17 +1,14 @@
-Table,"Create Table"
-product,"CREATE TABLE `product` (
-  `product_id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `product_name` varchar(45) NOT NULL,
-  `description` varchar(1000) NOT NULL,
-  `price` int NOT NULL,
-  `img_path` varchar(500) NOT NULL,
-  `type` varchar(60) NOT NULL,
-  `shelf_date` date DEFAULT NULL,
-  `product_condition` varchar(500) NOT NULL,
-  `status` varchar(45) DEFAULT NULL,
-  `grade` varchar(45) DEFAULT NULL,
-  `location` varchar(45) NOT NULL,
-  `dept_group` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci"
+Field,Type,Null,Key,Default,Extra
+product_id,int,NO,PRI,NULL,auto_increment
+user_id,int,NO,,NULL,
+product_name,varchar(45),NO,,NULL,
+description,varchar(1000),NO,,NULL,
+price,int,NO,,NULL,
+img_path,varchar(500),NO,,NULL,
+type,varchar(60),NO,,NULL,
+shelf_date,date,YES,,NULL,
+product_condition,varchar(500),NO,,NULL,
+status,varchar(45),YES,,NULL,
+grade,varchar(45),YES,,NULL,
+location,varchar(45),NO,,NULL,
+dept_group,varchar(45),YES,,NULL,
