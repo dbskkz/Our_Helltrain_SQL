@@ -1,0 +1,17 @@
+Table,"Create Table"
+product,"CREATE TABLE `product` (
+  `product_id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `product_name` varchar(45) NOT NULL,
+  `description` varchar(1000) NOT NULL,
+  `price` int NOT NULL,
+  `img_path` varchar(2000) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `shelf_date` date DEFAULT NULL,
+  `product_condition` varchar(500) NOT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `grade` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `dept_group` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci"
