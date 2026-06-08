@@ -1,0 +1,15 @@
+Field,Type,Null,Key,Default,Extra
+user_id,int,NO,PRI,NULL,auto_increment
+user_email,varchar(60),NO,,NULL,
+user_name,varchar(45),NO,,NULL,
+password,varchar(60),NO,,NULL,
+phone,varchar(20),YES,,NULL,
+location,varchar(45),NO,,NULL,
+school,varchar(60),NO,,NULL,
+department,varchar(45),YES,,NULL,
+status,varchar(45),NO,,NULL,
+verified,date,YES,,NULL,
+good_level,float,YES,,0,
+msg,varchar(200),YES,,NULL,
+img_path,varchar(500),YES,,https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png,
+create_date,datetime,NO,,CURRENT_TIMESTAMP,DEFAULT_GENERATED
