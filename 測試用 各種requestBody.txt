@@ -1,0 +1,41 @@
+{
+    "userId": 1,
+    "productName": "男哥的筆記第二集",
+    "description": "因為太認真了所以是重度使用，轉職必備 萬十祝你 once again 200 successfully !",
+    "price": 100000,
+    "imgPath": [
+        "https://picsum.photos/300/200?random=1"
+    ],
+    "type": [
+        "筆記考古",
+        "生活用品"
+    ],
+    "shelfDate": "2026-06-01",
+    "productCondition": "全新",
+    "status": "販售中",
+    "grade": [
+        "大一"
+    ],
+    "location": [
+        "高雄市"
+    ],
+    "deptGroup": [
+        "不拘",
+        "管理學群"
+    ],
+    "seller": {
+        "userId": 1,
+        "userName": "王小阿明",
+        "school": "南臺科技大學",
+        "userImgPath": "https://res.cloudinary.com/df8kviidh/image/upload/v1780370841/ershougo/arjvqmvlh8xomburxky3.png"
+    }
+}
+
+
+
+
+
+{
+    "email": "U10337005@o365.mcut.edu.tw",
+    "password": "asd123456"
+}

@@ -1,0 +1,4 @@
+user_id,user_email,user_name,password,phone,location,school,department,status,verified,good_level,msg,img_path,create_date
+1,U10337005@o365.mcut.edu.tw,王小阿明,$2a$10$NppacbJc12mKzN39O..Nae6kQd6VeLIcvwm24AYjYSxggwEu8quTa,NULL,"["高雄市","臺南市"]",南臺科技大學,NULL,正常,2026-05-31,0,NULL,https://res.cloudinary.com/df8kviidh/image/upload/v1780370841/ershougo/arjvqmvlh8xomburxky3.png,"2026-05-31 17:21:37"
+4,4A50006@stust.edu.tw,宇宙人,$2a$10$F2C2IdoAFNzovWsLThjEnuLoaZFbVZtk/9OLbc3O4XIoxsuxSiDhG,NULL,"["臺南市"]",南臺科技大學,NULL,正常,2026-06-03,0,NULL,https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png,"2026-06-03 08:29:04"
+5,123456@nthu.gapp.edu.tw,李吉娃娃,$2a$10$oH0Kpfx0wbut2RpGKxsIK.OJUBinrwFS9pPs3muj5vYAarcwUpIZ6,NULL,"["高雄市","新竹市"]",國立清華大學,生命科學系,正常,2026-06-03,1,NULL,https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png,"2026-06-06 13:29:20"
