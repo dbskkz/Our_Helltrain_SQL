@@ -44,6 +44,59 @@ LOCK TABLES `announcement` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `chat_message`
+--
+
+DROP TABLE IF EXISTS `chat_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `chat_message` (
+  `message_id` int NOT NULL AUTO_INCREMENT,
+  `room_id` int NOT NULL,
+  `sender_id` int NOT NULL,
+  `message_content` varchar(1000) NOT NULL,
+  `is_read` tinyint NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`message_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chat_message`
+--
+
+LOCK TABLES `chat_message` WRITE;
+/*!40000 ALTER TABLE `chat_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `chat_room`
+--
+
+DROP TABLE IF EXISTS `chat_room`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `chat_room` (
+  `room_id` int NOT NULL AUTO_INCREMENT,
+  `product_id` int DEFAULT NULL,
+  `initiator_id` int NOT NULL,
+  `receiver_id` int NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`room_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chat_room`
+--
+
+LOCK TABLES `chat_room` WRITE;
+/*!40000 ALTER TABLE `chat_room` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_room` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `collect`
 --
 
@@ -134,7 +187,7 @@ CREATE TABLE `order` (
   `buyer_rank` float DEFAULT '0',
   `salesman_rank` float DEFAULT '0',
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +196,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,1,35,'2026-06-02','已取消',0,0,0,0),(2,2,34,'2026-06-02','已取消',0,0,0,0),(3,3,34,'2026-06-02','完成交易',1,1,0,0),(4,5,34,'2026-06-02','已取消',0,0,0,0),(5,4,34,'2026-06-02','已取消',0,0,0,0),(6,4,35,'2026-06-03','請求回應中',0,0,0,0);
+INSERT INTO `order` VALUES (1,1,35,'2026-06-02','已取消',0,0,0,0),(2,2,34,'2026-06-02','已取消',0,0,0,0),(3,3,34,'2026-06-02','完成交易',1,1,0,0),(4,5,34,'2026-06-02','已取消',0,0,0,0),(5,4,34,'2026-06-02','已取消',0,0,0,0),(6,4,35,'2026-06-03','請求回應中',0,0,0,0),(7,6,36,'2026-06-03','請求回應中',0,0,0,0),(8,10,36,'2026-06-03','請求回應中',0,0,0,0),(9,8,62,'2026-06-03','訂單成立',0,0,0,0),(10,9,81,'2026-06-03','訂單成立',0,0,0,0);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +264,7 @@ CREATE TABLE `report` (
 
 LOCK TABLES `report` WRITE;
 /*!40000 ALTER TABLE `report` DISABLE KEYS */;
-INSERT INTO `report` VALUES (1,3,0,1,'ㄊㄇ的這隻熊根本不會跳舞，每天還都限定要吃K壽司的鮭魚X的咧有這個錢我不如去養一隻真的黑熊，這根本就是詐欺！！！','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','商品','物品與描述不同',NULL),(2,0,4,1,'長得太像肥宅，還賣健身器材，怎麼不自己先用','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','使用者','其他',NULL),(3,0,4,1,'長得太像肥宅，還賣健身器材，怎麼不自己先用','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780466069/ershougo/mtpdy4wi4a4jfmsyvfns.jpg\"]','2026-06-03','已處裡','使用者','其他',NULL),(4,34,0,1,'幹吉掰，我打錯商品編號了。ㄊㄇ的這隻熊根本不會跳舞，每天還都限定要吃K壽司的鮭魚X的咧有這個錢我不如去養一隻真的黑熊，這根本就是詐欺！！！','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','商品','物品與描述不同',NULL);
+INSERT INTO `report` VALUES (1,3,0,1,'ㄊㄇ的這隻熊根本不會跳舞，每天還都限定要吃K壽司的鮭魚X的咧有這個錢我不如去養一隻真的黑熊，這根本就是詐欺！！！','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','商品','物品與描述不同',NULL),(2,0,4,1,'長得太像肥宅，還賣健身器材，怎麼不自己先用','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','使用者','其他',NULL),(3,0,4,1,'長得太像肥宅，還賣健身器材，怎麼不自己先用','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780466069/ershougo/mtpdy4wi4a4jfmsyvfns.jpg\"]','2026-06-03','已處裡','使用者','其他',NULL),(4,33,0,1,'幹吉掰，我打錯商品編號了。ㄊㄇ的這隻熊根本不會跳舞，每天還都限定要吃K壽司的鮭魚X的咧有這個錢我不如去養一隻真的黑熊，這根本就是詐欺！！！','[\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442495/ershougo/tnprmrxhkt2w7ae63gcu.jpg\",\"https://res.cloudinary.com/df8kviidh/image/upload/v1780442497/ershougo/idbsuckp8mghk4ekqrfe.jpg\"]','2026-06-03','已處裡','商品','物品與描述不同',NULL);
 /*!40000 ALTER TABLE `report` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -334,4 +387,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-13 22:52:47
+-- Dump completed on 2026-06-13 17:46:14
+

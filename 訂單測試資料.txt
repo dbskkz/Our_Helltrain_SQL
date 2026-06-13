@@ -1,0 +1,4 @@
+INSERT INTO `our_helltrain`.`order` (`order_id`, `buyer_id`, `product_id`, `create_date`, `status`, `buyer_check`, `seller_check`, `buyer_rank`, `salesman_rank`) VALUES ('7', '6', '36', '2026-06-03', '請求回應中', '0', '0', '0', '0');
+INSERT INTO `our_helltrain`.`order` (`order_id`, `buyer_id`, `product_id`, `create_date`, `status`, `buyer_check`, `seller_check`, `buyer_rank`, `salesman_rank`) VALUES ('8', '10', '36', '2026-06-03', '請求回應中', '0', '0', '0', '0');
+INSERT INTO `our_helltrain`.`order` (`order_id`, `buyer_id`, `product_id`, `create_date`, `status`, `buyer_check`, `seller_check`, `buyer_rank`, `salesman_rank`) VALUES ('9', '8', '62', '2026-06-03', '訂單成立', '0', '0', '0', '0');
+INSERT INTO `our_helltrain`.`order` (`order_id`, `buyer_id`, `product_id`, `create_date`, `status`, `buyer_check`, `seller_check`, `buyer_rank`, `salesman_rank`) VALUES ('10', '9', '81', '2026-06-03', '訂單成立', '0', '0', '0', '0');
