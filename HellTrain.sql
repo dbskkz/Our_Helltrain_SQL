@@ -377,6 +377,39 @@ LOCK TABLES `violation` WRITE;
 /*!40000 ALTER TABLE `violation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `violation` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `wish`
+--
+
+DROP TABLE IF EXISTS `wish`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `wish` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text,
+  `type` varchar(255) DEFAULT NULL,
+  `budget_min` int DEFAULT '0',
+  `budget_max` int DEFAULT '0',
+  `status` varchar(20) DEFAULT 'active',
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_status` (`status`),
+  KEY `idx_category` (`type`),
+  KEY `idx_user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wish`
+--
+
+LOCK TABLES `wish` WRITE;
+/*!40000 ALTER TABLE `wish` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wish` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -387,5 +420,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-13 17:46:14
-
+-- Dump completed on 2026-06-14 15:48:15
