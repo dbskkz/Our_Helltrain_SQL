@@ -395,11 +395,12 @@ CREATE TABLE `wish` (
   `budget_max` int DEFAULT '0',
   `status` varchar(20) DEFAULT 'active',
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `expired_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_status` (`status`),
   KEY `idx_category` (`type`),
   KEY `idx_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -408,6 +409,7 @@ CREATE TABLE `wish` (
 
 LOCK TABLES `wish` WRITE;
 /*!40000 ALTER TABLE `wish` DISABLE KEYS */;
+INSERT INTO `wish` VALUES (1,1,'徵求資料結構課本','希望是近兩年版本，書況良好即可。','教科書',200,500,'active','2026-06-10 14:30:00','2026-07-10 14:30:00'),(2,2,'徵求二手機械鍵盤','紅軸或茶軸皆可，希望附原廠配件。','3C電子',800,2000,'active','2026-06-11 09:15:00','2026-07-11 09:15:00'),(3,3,'徵求微積分筆記','大一微積分完整筆記，電子檔也可以。','筆記考古',100,300,'active','2026-06-12 16:40:00','2026-07-12 16:40:00'),(4,4,'徵求宿舍小冰箱','容量不限，希望功能正常。','家具家電',1000,3000,'active','2026-06-13 11:20:00','2026-07-13 11:20:00'),(5,5,'徵求計算機 CASIO fx-991','考試可使用型號，外觀不拘。','專業器材',300,800,'active','2026-06-14 08:00:00','2026-07-14 08:00:00'),(6,6,'徵求羽球拍','Yonex 或 Victor 皆可，拍框不要有裂痕。','戶外運動',500,2500,'active','2026-06-14 13:50:00','2026-07-14 13:50:00'),(7,7,'徵求桌上型螢幕','24 吋以上，1080P 即可。','3C電子',1500,5000,'active','2026-06-14 17:30:00','2026-07-14 17:30:00'),(8,8,'徵求管理學原文書','老師指定版本，書況八成新以上。','教科書',300,700,'active','2026-06-15 10:00:00','2026-07-15 10:00:00'),(9,9,'徵求單人床墊','搬宿舍用，希望能自取。','家具家電',500,2000,'active','2026-06-15 15:45:00','2026-07-15 15:45:00'),(10,10,'徵求 Python 程式設計筆記','上課整理的重點筆記或考古題。','筆記考古',100,500,'active','2026-06-15 18:20:00','2026-07-15 18:20:00');
 /*!40000 ALTER TABLE `wish` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -420,4 +422,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-14 15:48:15
+-- Dump completed on 2026-06-14 17:43:44

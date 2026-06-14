@@ -1,0 +1,11 @@
+Field,Type,Null,Key,Default,Extra
+id,bigint,NO,PRI,NULL,auto_increment
+user_id,bigint,NO,MUL,NULL,
+title,varchar(100),NO,,NULL,
+description,text,YES,,NULL,
+type,varchar(255),YES,MUL,NULL,
+budget_min,int,YES,,0,
+budget_max,int,YES,,0,
+status,varchar(20),YES,MUL,active,
+created_at,datetime,YES,,CURRENT_TIMESTAMP,DEFAULT_GENERATED
+expired_at,datetime,YES,,NULL,
