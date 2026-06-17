@@ -168,7 +168,7 @@ CREATE TABLE `manager` (
 
 LOCK TABLES `manager` WRITE;
 /*!40000 ALTER TABLE `manager` DISABLE KEYS */;
-INSERT INTO `manager` VALUES ('ks8930818@yahoo.edu.tw','管理員A','$2a$10$u.OMavdTY8vVaq1lvckjV.YHed/IR5LkViDD/qPJu6WRC9bN9C3Le',NULL);
+INSERT INTO `manager` VALUES ('k@ershougo.edu.tw','admin','$2a$10$u.OMavdTY8vVaq1lvckjV.YHed/IR5LkViDD/qPJu6WRC9bN9C3Le',NULL);
 /*!40000 ALTER TABLE `manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -426,4 +426,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-17 15:34:40
+-- Dump completed on 2026-06-17 21:38:20
