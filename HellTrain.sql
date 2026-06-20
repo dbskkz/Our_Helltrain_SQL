@@ -40,7 +40,7 @@ CREATE TABLE `announcement` (
 
 LOCK TABLES `announcement` WRITE;
 /*!40000 ALTER TABLE `announcement` DISABLE KEYS */;
-INSERT INTO `announcement` VALUES (1,'測試','https://res.cloudinary.com/df8kviidh/image/upload/v1781490284/ershougo/ujtn2cpdyckwv4hefit7.jpg','2026-06-15','2026-06-15',0,NULL),(2,'測試','https://res.cloudinary.com/df8kviidh/image/upload/v1781490286/ershougo/hysqbmkmldwfqu7xthvx.jpg','2026-06-15','2026-06-15',0,NULL),(3,'測試公告','https://res.cloudinary.com/df8kviidh/image/upload/v1781681649/ershougo/jpz9l7ktlbvatq3rjxlo.jpg','2026-06-17','2026-06-20',1,'測試公告，此公告留存三天三夜');
+INSERT INTO `announcement` VALUES (1,'測試','https://res.cloudinary.com/df8kviidh/image/upload/v1781490284/ershougo/ujtn2cpdyckwv4hefit7.jpg','2026-06-15','2026-06-15',0,NULL),(2,'測試','https://res.cloudinary.com/df8kviidh/image/upload/v1781490286/ershougo/hysqbmkmldwfqu7xthvx.jpg','2026-06-15','2026-06-15',0,NULL),(3,'測試公告','https://res.cloudinary.com/df8kviidh/image/upload/v1781681649/ershougo/jpz9l7ktlbvatq3rjxlo.jpg','2026-06-17','2026-06-23',1,'測試公告，此公告留存不只三天三夜YA');
 /*!40000 ALTER TABLE `announcement` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +59,7 @@ CREATE TABLE `chat_message` (
   `is_read` tinyint NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`message_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,6 +68,7 @@ CREATE TABLE `chat_message` (
 
 LOCK TABLES `chat_message` WRITE;
 /*!40000 ALTER TABLE `chat_message` DISABLE KEYS */;
+INSERT INTO `chat_message` VALUES (1,2,7,'1',0,'2026-06-20 14:43:32');
 /*!40000 ALTER TABLE `chat_message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +86,7 @@ CREATE TABLE `chat_room` (
   `receiver_id` int NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`room_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +95,7 @@ CREATE TABLE `chat_room` (
 
 LOCK TABLES `chat_room` WRITE;
 /*!40000 ALTER TABLE `chat_room` DISABLE KEYS */;
-INSERT INTO `chat_room` VALUES (1,0,1,3,'2026-06-15 09:57:12');
+INSERT INTO `chat_room` VALUES (1,0,1,3,'2026-06-15 09:57:12'),(2,0,7,2,'2026-06-20 14:43:24');
 /*!40000 ALTER TABLE `chat_room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +120,7 @@ CREATE TABLE `collect` (
 
 LOCK TABLES `collect` WRITE;
 /*!40000 ALTER TABLE `collect` DISABLE KEYS */;
-INSERT INTO `collect` VALUES (11,1,7);
+INSERT INTO `collect` VALUES (7,1,2);
 /*!40000 ALTER TABLE `collect` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +191,7 @@ CREATE TABLE `order` (
   `buyer_rank` float DEFAULT '0',
   `salesman_rank` float DEFAULT '0',
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +200,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,1,35,'2026-06-02','已取消',0,0,0,0),(2,2,34,'2026-06-02','已取消',0,0,0,0),(3,3,34,'2026-06-02','完成交易',1,1,5,0),(4,5,34,'2026-06-02','已取消',0,0,0,0),(5,4,34,'2026-06-02','已取消',0,0,0,0),(6,4,35,'2026-06-03','請求回應中',0,0,0,0),(7,6,36,'2026-06-03','請求回應中',0,0,0,0),(8,10,36,'2026-06-03','請求回應中',0,0,0,0),(9,8,62,'2026-06-03','訂單成立',0,0,0,0),(10,9,81,'2026-06-03','訂單成立',0,0,0,0),(11,1,13,'2026-06-15','請求回應中',0,0,0,0),(12,1,38,'2026-06-15','訂單成立',0,0,0,0),(13,3,80,'2026-06-15','請求回應中',0,0,0,0),(14,3,1,'2026-06-15','完成交易',1,1,1,0),(15,1,5,'2026-06-17','請求回應中',0,0,0,0);
+INSERT INTO `order` VALUES (1,1,35,'2026-06-02','已取消',0,0,0,0),(2,2,34,'2026-06-02','已取消',0,0,0,0),(3,3,34,'2026-06-02','完成交易',1,1,5,0),(4,5,34,'2026-06-02','已取消',0,0,0,0),(5,4,34,'2026-06-02','已取消',0,0,0,0),(6,4,35,'2026-06-03','請求回應中',0,0,0,0),(7,6,36,'2026-06-03','請求回應中',0,0,0,0),(8,10,36,'2026-06-03','請求回應中',0,0,0,0),(9,8,62,'2026-06-03','訂單成立',0,0,0,0),(10,9,81,'2026-06-03','訂單成立',0,0,0,0),(11,1,13,'2026-06-15','請求回應中',0,0,0,0),(12,1,38,'2026-06-15','訂單成立',0,0,0,0),(13,3,80,'2026-06-15','請求回應中',0,0,0,0),(14,3,1,'2026-06-15','完成交易',1,1,1,0),(15,1,5,'2026-06-17','請求回應中',0,0,0,0),(16,7,2,'2026-06-20','請求回應中',0,0,0,0);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -352,7 +353,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'U10337005@o365.mcut.edu.tw','王小阿明','$2a$10$NppacbJc12mKzN39O..Nae6kQd6VeLIcvwm24AYjYSxggwEu8quTa','','[\"高雄市\",\"臺南市\"]','南臺科技大學','','正常','2026-05-31',0,'','https://res.cloudinary.com/df8kviidh/image/upload/v1780370841/ershougo/arjvqmvlh8xomburxky3.png','2026-05-31 17:21:37',NULL),(2,'u11233001@stust.edu.tw','林柏宇','$2a$10$7fHb.RcxD/rnm8hqbVixEu3DRDb1jemLzbzOVyZnY7Hnl3ovQuR0C','0911222333','[\"臺南市\"]','南臺科技大學','資訊工程系','正常','2026-06-01',4.8,'喜歡面交','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-01 09:15:22',NULL),(3,'u11233002@stust.edu.tw','陳語涵','$2a$10$A31Sp4CTZmc1oxjB1vbIyOAJ5RhLVDndQ3av0i2jHZ5PFzZwFNGqa','0922333444','[\"臺中市\"]','逢甲大學','企業管理學系','正常','2026-06-01',3,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-01 10:22:31',NULL),(4,'4A50006@stust.edu.tw','宇宙人','$2a$10$F2C2IdoAFNzovWsLThjEnuLoaZFbVZtk/9OLbc3O4XIoxsuxSiDhG',NULL,'[\"臺南市\"]','南臺科技大學',NULL,'正常','2026-06-03',0,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 08:29:04',NULL),(5,'123456@nthu.gapp.edu.tw','李吉娃娃','$2a$10$oH0Kpfx0wbut2RpGKxsIK.OJUBinrwFS9pPs3muj5vYAarcwUpIZ6',NULL,'[\"高雄市\",\"新竹市\"]','國立清華大學','生命科學系','正常','2026-06-03',1,'吉娃娃 吉娃娃','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 13:29:20',NULL),(6,'u11233003@ncku.edu.tw','張家豪','$2a$10$mzS75hmkk97WAFCPUlx6p.xFG70vqseTrkJA8pyUffmYW3NR7mFCW','0933444555','[\"臺南市\"]','國立成功大學','電機工程學系','正常','2026-06-02',4.9,'回覆速度快','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-02 14:01:33',NULL),(7,'u11233004@nccu.edu.tw','李吉利壞寶寶','$2a$10$6eEfn3XY5kiBZ3qO/QR93.nPTfCRetktSvu2QjeuzI4.z4pRZUMrC','09-44567890','[\"高雄市\"]','國立清華大學','生命科學系','正常','2026-06-02',4.5,'汪 汪汪汪','https://res.cloudinary.com/df8kviidh/image/upload/v1781357774/ershougo/kgntrxfnbmgirakg7dfu.jpg','2026-06-02 18:45:20',NULL),(8,'u11233005@mail.nsysu.edu.tw','吳承恩','$2a$10$IpzDL3Q7D07De346DibEg.LwWSPxKLKk4/J6G/zfYqC2J71Or50yW','0955666777','[\"高雄市\"]','國立中山大學','資訊管理學系','正常','2026-06-03',4.7,'假日可面交','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 11:20:08',NULL),(9,'u11233006@mail.ncku.edu.tw','蔡依庭','$2a$10$hHqQ.1mXphdkTjC20g3RAeQBNTk3YNM9U/k0IvIpCWdfIrUDCUYGK','0966777888','[\"臺南市\"]','國立成功大學','建築學系','正常','2026-06-03',4.3,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 16:05:12',NULL),(10,'u11233007@gm.ttu.edu.tw','楊博鈞','$2a$10$BFKpLwJuhXWcEad2koHQOOk8DB6Teta0rbAZdMropeonbKGvYPKem','0977888999','[\"臺北市\"]','大同大學','機械工程學系','正常','2026-06-04',4.4,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-04 08:30:45',NULL),(11,'u11233008@mail.nptu.edu.tw','蘇東坡','$2a$10$R9rNUbbqGxP6xOLC1xp8o.ESC95zj7ijKMQkCG88HW8ZdfSnfkSHC','09-87878787','[\"新竹市\"]','國立清華大學','中國語文學系語文教師碩士在職專班','正常','2026-06-04',4.6,'明月幾時有？把酒問青天。\n不知天上宮闕，今夕是何年。\n我欲乘風歸去，又恐瓊樓玉宇，\n高處不勝寒。\n起舞弄清影，何似在人間！\n\n轉朱閣，低綺戶，照無眠。\n不應有恨，何事長向別時圓！\n人有悲歡離合，月有陰晴圓缺，此事古難全。\n但願人長久，千里共嬋娟。\n\n豬肉超好吃','https://res.cloudinary.com/df8kviidh/image/upload/v1781359022/ershougo/jltzpasl3i5hnh6b8gk2.png','2026-06-04 13:17:52',NULL),(12,'u11233009@mail.ncu.edu.tw','鄭凱文','$2a$10$6td/84qriHjWC.2kyvzztenVb84E8u7AnPRS4Fliy5UuU7JZ2Sh4O','0912345678','[\"桃園市\"]','國立中央大學','資訊工程學系','正常','2026-06-05',4.8,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-05 09:48:26',NULL),(13,'u11233010@ntu.edu.tw','劉怡君','$2a$10$x21IL50U1/LhF4tGA5eHLeBfu22VNkWATPE8qw1.6.7paxOg5RGCy','0923456789','[\"臺北市\"]','國立臺灣大學','法律學系','正常','2026-06-05',4.9,'誠信交易','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-05 15:26:11',NULL),(14,'u11233011@mail.cycu.edu.tw','周冠廷','$2a$10$SSQ9wI3GJgvJk7icZuJFfO9ItG9EiOk/xxbs16pTmSArVyEsO6arW','0934567890','[\"桃園市\"]','中原大學','電子工程學系','正常','2026-06-06',4.2,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 10:12:38',NULL),(15,'u11233012@mail.fcu.edu.tw','何欣穎','$2a$10$dajQf44x0bMIa6Z0IQiWXOUvzu6Bo/cBG.yYcvyp08p35vz0wx/IS','0945678901','[\"臺中市\"]','國立清華大學','資訊工程學系','正常','2026-06-06',4.7,'晚上較常上線','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 21:03:57',NULL),(20,'wangliangkai@gapp.nthu.edu.tw','王小亮','$2a$10$5sMzRxhQ2K/u0f73PQd.2uhvom4kb6mR1KAresCyRAS3Rsm47SN8q',NULL,'[\"新竹市\"]','國立清華大學',NULL,'未驗證',NULL,0,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-17 10:51:47',NULL),(21,'reflecter91224@gapp.nthu.edu.tw','草地肥貓大神','$2a$10$GVyYijNN3WjsQgGvnZ8ej.48LTiDjI1OKT10bzbGoYm4sm1mP7hym',NULL,'[\"新竹市\"]','國立清華大學',NULL,'未驗證',NULL,0,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-17 11:36:56',NULL),(22,'s110031903@m110.nthu.edu.tw','草地肥貓大神','$2a$10$6H09k7tBVL43KmNPydOpo.prG/509JymLTSrUqaPsySA0zEi.0I86',NULL,'[\"新竹市\"]','國立清華大學',NULL,'未驗證',NULL,0,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-17 11:38:18',NULL);
+INSERT INTO `user` VALUES (1,'U10337005@o365.mcut.edu.tw','王小阿明','$2a$10$NppacbJc12mKzN39O..Nae6kQd6VeLIcvwm24AYjYSxggwEu8quTa','','[\"高雄市\",\"臺南市\"]','南臺科技大學','','正常','2026-05-31',0,'','https://res.cloudinary.com/df8kviidh/image/upload/v1780370841/ershougo/arjvqmvlh8xomburxky3.png','2026-05-31 17:21:37',NULL),(2,'u11233001@stust.edu.tw','林柏宇','$2a$10$7fHb.RcxD/rnm8hqbVixEu3DRDb1jemLzbzOVyZnY7Hnl3ovQuR0C','0911222333','[\"臺南市\"]','南臺科技大學','資訊工程系','正常','2026-06-01',4.8,'喜歡面交','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-01 09:15:22',NULL),(3,'u11233002@stust.edu.tw','陳語涵','$2a$10$A31Sp4CTZmc1oxjB1vbIyOAJ5RhLVDndQ3av0i2jHZ5PFzZwFNGqa','0922333444','[\"臺中市\"]','逢甲大學','企業管理學系','正常','2026-06-01',3,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-01 10:22:31',NULL),(4,'4A50006@stust.edu.tw','宇宙人','$2a$10$F2C2IdoAFNzovWsLThjEnuLoaZFbVZtk/9OLbc3O4XIoxsuxSiDhG',NULL,'[\"臺南市\"]','南臺科技大學',NULL,'正常','2026-06-03',0,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 08:29:04',NULL),(5,'123456@nthu.gapp.edu.tw','李吉娃娃','$2a$10$oH0Kpfx0wbut2RpGKxsIK.OJUBinrwFS9pPs3muj5vYAarcwUpIZ6',NULL,'[\"高雄市\",\"新竹市\"]','國立清華大學','生命科學系','正常','2026-06-03',1,'吉娃娃 吉娃娃','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 13:29:20',NULL),(6,'u11233003@ncku.edu.tw','張家豪','$2a$10$mzS75hmkk97WAFCPUlx6p.xFG70vqseTrkJA8pyUffmYW3NR7mFCW','0933444555','[\"臺南市\"]','國立成功大學','電機工程學系','正常','2026-06-02',4.9,'回覆速度快','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-02 14:01:33',NULL),(7,'u11233004@nccu.edu.tw','李吉利壞寶寶吧','$2a$10$6eEfn3XY5kiBZ3qO/QR93.nPTfCRetktSvu2QjeuzI4.z4pRZUMrC','09-44567890','[\"高雄市\",\"臺中市\",\"屏東縣\"]','國立清華大學','114秋季班國際半導體暨IC設計產業人才專班','正常','2026-06-02',4.5,'汪 汪汪汪\n鴉鴉鴉 \n汪　　汪汪','https://res.cloudinary.com/df8kviidh/image/upload/v1781937752/ershougo/mi8n1pdmu3ncof7gk3hy.jpg','2026-06-02 18:45:20',NULL),(8,'u11233005@mail.nsysu.edu.tw','吳承恩','$2a$10$IpzDL3Q7D07De346DibEg.LwWSPxKLKk4/J6G/zfYqC2J71Or50yW','0955666777','[\"高雄市\"]','國立中山大學','資訊管理學系','正常','2026-06-03',4.7,'假日可面交','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 11:20:08',NULL),(9,'u11233006@mail.ncku.edu.tw','蔡依庭','$2a$10$hHqQ.1mXphdkTjC20g3RAeQBNTk3YNM9U/k0IvIpCWdfIrUDCUYGK','0966777888','[\"臺南市\"]','國立成功大學','建築學系','正常','2026-06-03',4.3,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-03 16:05:12',NULL),(10,'u11233007@gm.ttu.edu.tw','楊博鈞','$2a$10$BFKpLwJuhXWcEad2koHQOOk8DB6Teta0rbAZdMropeonbKGvYPKem','0977888999','[\"臺北市\"]','大同大學','機械工程學系','正常','2026-06-04',4.4,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-04 08:30:45',NULL),(11,'u11233008@mail.nptu.edu.tw','蘇東坡','$2a$10$R9rNUbbqGxP6xOLC1xp8o.ESC95zj7ijKMQkCG88HW8ZdfSnfkSHC','09-87878787','[\"新竹市\"]','國立清華大學','中國語文學系語文教師碩士在職專班','正常','2026-06-04',4.6,'明月幾時有？把酒問青天。\n不知天上宮闕，今夕是何年。\n我欲乘風歸去，又恐瓊樓玉宇，\n高處不勝寒。\n起舞弄清影，何似在人間！\n\n轉朱閣，低綺戶，照無眠。\n不應有恨，何事長向別時圓！\n人有悲歡離合，月有陰晴圓缺，此事古難全。\n但願人長久，千里共嬋娟。\n\n豬肉超好吃','https://res.cloudinary.com/df8kviidh/image/upload/v1781359022/ershougo/jltzpasl3i5hnh6b8gk2.png','2026-06-04 13:17:52',NULL),(12,'u11233009@mail.ncu.edu.tw','鄭凱文','$2a$10$6td/84qriHjWC.2kyvzztenVb84E8u7AnPRS4Fliy5UuU7JZ2Sh4O','0912345678','[\"桃園市\"]','國立中央大學','資訊工程學系','正常','2026-06-05',4.8,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-05 09:48:26',NULL),(13,'u11233010@ntu.edu.tw','劉怡君','$2a$10$x21IL50U1/LhF4tGA5eHLeBfu22VNkWATPE8qw1.6.7paxOg5RGCy','0923456789','[\"臺北市\"]','國立臺灣大學','法律學系','正常','2026-06-05',4.9,'誠信交易','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-05 15:26:11',NULL),(14,'u11233011@mail.cycu.edu.tw','周冠廷','$2a$10$SSQ9wI3GJgvJk7icZuJFfO9ItG9EiOk/xxbs16pTmSArVyEsO6arW','0934567890','[\"桃園市\"]','中原大學','電子工程學系','正常','2026-06-06',4.2,NULL,'https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 10:12:38',NULL),(15,'u11233012@mail.fcu.edu.tw','500你是我的花朵','$2a$10$dajQf44x0bMIa6Z0IQiWXOUvzu6Bo/cBG.yYcvyp08p35vz0wx/IS','0945678901','[\"臺中市\"]','國立清華大學','資訊工程學系','正常','2026-06-06',4.7,'晚上較常上線','https://res.cloudinary.com/df8kviidh/image/upload/v1780243053/default_avatar_lvgh1a.png','2026-06-06 21:03:57',NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -404,7 +405,7 @@ CREATE TABLE `wish` (
   KEY `idx_status` (`status`),
   KEY `idx_category` (`type`),
   KEY `idx_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -413,7 +414,7 @@ CREATE TABLE `wish` (
 
 LOCK TABLES `wish` WRITE;
 /*!40000 ALTER TABLE `wish` DISABLE KEYS */;
-INSERT INTO `wish` VALUES (1,1,'徵求資料結構課本','希望是近兩年版本，書況良好即可。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',200,500,'active','2026-06-10 14:30:00','2026-07-10 14:30:00','[\"桃園縣\",\"新竹市\"]'),(2,2,'徵求二手機械鍵盤','紅軸或茶軸皆可，希望附原廠配件。','[\"3C電子\"]',800,2000,'active','2026-06-11 09:15:00','2026-07-11 09:15:00','[\"桃園縣\",\"新竹市\"]'),(3,3,'徵求微積分筆記','大一微積分完整筆記，電子檔也可以。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',100,300,'active','2026-06-12 16:40:00','2026-07-12 16:40:00','[\"桃園縣\",\"新竹市\"]'),(4,4,'徵求宿舍小冰箱','容量不限，希望功能正常。','[\"家具家電\"]',1000,3000,'active','2026-06-13 11:20:00','2026-07-13 11:20:00','[\"桃園縣\",\"新竹市\"]'),(5,5,'徵求計算機 CASIO fx-991','考試可使用型號，外觀不拘。','[\"專業器材\"]',300,800,'active','2026-06-14 08:00:00','2026-07-14 08:00:00','[\"桃園縣\",\"新竹市\"]'),(6,6,'徵求羽球拍','Yonex 或 Victor 皆可，拍框不要有裂痕。','[\"戶外運動\"]',500,2500,'active','2026-06-14 13:50:00','2026-07-14 13:50:00','[\"新竹市\",\"台中市\"]'),(7,7,'The C Programming Language, 2nd edition ','先來個冷笑話 有一個型男很懂衣服怎麼穿搭，有一天他走在路上，有人跟他說: \"哇賽! 你超會搭!!\" 型男就燒焦了。 <徵書> 書名: The C Programming Language, 2nd edition','[\"課本\"]',1500,5000,'active','2026-06-14 17:30:00','2026-07-14 17:30:00','[\"新竹市\",\"台中市\"]'),(8,8,'徵求管理學原文書','老師指定版本，書況八成新以上。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',300,700,'active','2026-06-15 10:00:00','2026-07-15 10:00:00','[\"新竹市\",\"台中市\"]'),(9,9,'徵求單人床墊','搬宿舍用，希望能自取。','[\"家具家電\"]',500,2000,'active','2026-06-15 15:45:00','2026-07-15 15:45:00','[\"新竹市\",\"台中市\"]'),(10,10,'徵求 Python 程式設計筆記','上課整理的重點筆記或考古題。','[\"書籍\",\"教科書\",\"筆記考古\"]',100,500,'active','2026-06-15 18:20:00','2026-07-15 18:20:00','[\"新竹市\",\"台中市\"]'),(11,5,'男哥親簽講義','錢都給你了，我真的很需要男哥的親簽，拜託禪讓給我','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',100,3000000,'active','2026-06-14 21:05:58','2026-07-14 21:05:58','[\"新竹市\",\"高雄市\"]'),(12,5,'徵 Nintendo Switch 一代 二手機','暑假想徵一台 Switch 來打發時間～ 希望是近五年內購入，功能正常、可正常遊玩即可。 基本配件希望有主機、Joy-Con、底座、充電器。 外觀有正常使用痕跡可接受，但螢幕不要嚴重刮傷、Joy-Con 不要漂移。 盒裝有無皆可，有遊戲片、保護殼、記憶卡也可以一起報價。 麻煩私訊提供購買年份、主機狀況、配件內容、照片與價格。 可台北／新竹面交，謝謝！','[\"3C電子\"]',0,200,'active','2026-06-14 21:08:26','2026-07-14 21:08:26','[\"新竹市\",\"台北市\"]'),(13,5,'徵 教我吉他的人','希望在半年內學會基本和弦與彈唱','[\"學習\"]',5000,15000,'active','2026-06-17 14:48:24','2026-07-17 14:48:24','[\"新竹市\",\"高雄市\"]'),(14,5,'幫我打蟑螂','拜託','null',1,1,'active','2026-06-17 14:58:08','2026-07-17 14:58:08','null');
+INSERT INTO `wish` VALUES (1,1,'徵求資料結構課本','希望是近兩年版本，書況良好即可。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',200,500,'active','2026-06-10 14:30:00','2026-07-10 14:30:00','[\"桃園縣\",\"新竹市\"]'),(2,2,'徵求二手機械鍵盤','紅軸或茶軸皆可，希望附原廠配件。','[\"3C電子\"]',800,2000,'active','2026-06-11 09:15:00','2026-07-11 09:15:00','[\"桃園縣\",\"新竹市\"]'),(3,3,'徵求微積分筆記','大一微積分完整筆記，電子檔也可以。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',100,300,'active','2026-06-12 16:40:00','2026-07-12 16:40:00','[\"桃園縣\",\"新竹市\"]'),(4,4,'徵求宿舍小冰箱','容量不限，希望功能正常。','[\"家具家電\"]',1000,3000,'active','2026-06-13 11:20:00','2026-07-13 11:20:00','[\"桃園縣\",\"新竹市\"]'),(5,5,'徵求計算機 CASIO fx-991','考試可使用型號，外觀不拘。','[\"專業器材\"]',300,800,'active','2026-06-14 08:00:00','2026-07-14 08:00:00','[\"桃園縣\",\"新竹市\"]'),(6,6,'徵求羽球拍','Yonex 或 Victor 皆可，拍框不要有裂痕。','[\"戶外運動\"]',500,2500,'active','2026-06-14 13:50:00','2026-07-14 13:50:00','[\"新竹市\",\"台中市\"]'),(7,7,'The C Programming Language, 2nd edition ','先來個冷笑話 有一個型男很懂衣服怎麼穿搭，有一天他走在路上，有人跟他說: \"哇賽! 你超會搭!!\" 型男就燒焦了。 <徵書> 書名: The C Programming Language, 2nd edition','[\"課本\"]',1500,5000,'active','2026-06-14 17:30:00','2026-07-14 17:30:00','[\"新竹市\",\"台中市\"]'),(8,8,'徵求管理學原文書','老師指定版本，書況八成新以上。','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',300,700,'active','2026-06-15 10:00:00','2026-07-15 10:00:00','[\"新竹市\",\"台中市\"]'),(9,9,'徵求單人床墊','搬宿舍用，希望能自取。','[\"家具家電\"]',500,2000,'active','2026-06-15 15:45:00','2026-07-15 15:45:00','[\"新竹市\",\"台中市\"]'),(10,10,'徵求 Python 程式設計筆記','上課整理的重點筆記或考古題。','[\"書籍\",\"教科書\",\"筆記考古\"]',100,500,'active','2026-06-15 18:20:00','2026-07-15 18:20:00','[\"新竹市\",\"台中市\"]'),(11,5,'男哥親簽講義','錢都給你了，我真的很需要男哥的親簽，拜託禪讓給我','[\"書籍\",\"課本\",\"教科書\",\"筆記考古\"]',100,3000000,'active','2026-06-14 21:05:58','2026-07-14 21:05:58','[\"新竹市\",\"高雄市\"]'),(12,5,'徵 Nintendo Switch 一代 二手機','暑假想徵一台 Switch 來打發時間～ 希望是近五年內購入，功能正常、可正常遊玩即可。 基本配件希望有主機、Joy-Con、底座、充電器。 外觀有正常使用痕跡可接受，但螢幕不要嚴重刮傷、Joy-Con 不要漂移。 盒裝有無皆可，有遊戲片、保護殼、記憶卡也可以一起報價。 麻煩私訊提供購買年份、主機狀況、配件內容、照片與價格。 可台北／新竹面交，謝謝！','[\"3C電子\"]',0,200,'active','2026-06-14 21:08:26','2026-07-14 21:08:26','[\"新竹市\",\"台北市\"]'),(13,5,'徵 教我吉他的人','希望在半年內學會基本和弦與彈唱','[\"學習\"]',5000,15000,'active','2026-06-17 14:48:24','2026-07-17 14:48:24','[\"新竹市\",\"高雄市\"]'),(14,5,'幫我打蟑螂','拜託','null',1,1,'active','2026-06-17 14:58:08','2026-07-17 14:58:08','null'),(15,7,'徵 禮拜三很閒又想看電鋸人的人','剛看完胃很痛 沒特典海報頭更痛\n徵人下周三去幫排海報 你的電影票我出 \n或是其他酬勞可議\n更目前找到人了 他如果失敗我在直接350買海報','null',0,10000,'active','2026-06-20 14:40:37','2026-07-20 14:40:37','[\"新竹市\"]');
 /*!40000 ALTER TABLE `wish` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -426,4 +427,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-20 14:16:30
+-- Dump completed on 2026-06-20 14:48:28
