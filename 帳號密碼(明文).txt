@@ -7,7 +7,7 @@ asd123456
 U10337007@o365.mcut.edu.tw
 Test1234
 
-李吉娃娃
+李吉娃娃 // 不准動他
 123456@nthu.gapp.edu.tw
 MitochondrionIsThePowerPlantOfBody1234
 
@@ -25,7 +25,7 @@ b12345678
 u11233003@ncku.edu.tw
 c12345678
 
-李吉利壞寶寶
+李吉利壞寶寶 // 不准動他
 u11233004@nccu.edu.tw
 d12345678
 
@@ -41,7 +41,7 @@ f12345678
 u11233007@gm.ttu.edu.tw
 g12345678
 
-蘇東坡
+蘇東坡 // 不准動他
 u11233008@mail.nptu.edu.tw
 h12345678
 
@@ -57,7 +57,7 @@ j12345678
 u11233011@mail.cycu.edu.tw
 k12345678
 
-500你是我的花朵
+500你是我的花朵 // 不准動他
 u11233012@mail.fcu.edu.tw
 l12345678
 
