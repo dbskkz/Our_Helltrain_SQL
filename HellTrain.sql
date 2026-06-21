@@ -59,7 +59,7 @@ CREATE TABLE `chat_message` (
   `is_read` tinyint NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`message_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `chat_message` (
 
 LOCK TABLES `chat_message` WRITE;
 /*!40000 ALTER TABLE `chat_message` DISABLE KEYS */;
-INSERT INTO `chat_message` VALUES (1,2,7,'1',0,'2026-06-20 14:43:32'),(2,3,1,'嗨',1,'2026-06-20 16:37:31');
+INSERT INTO `chat_message` VALUES (1,2,7,'1',1,'2026-06-20 14:43:32'),(2,3,1,'嗨',1,'2026-06-20 16:37:31'),(3,2,7,'1',1,'2026-06-21 19:14:49'),(4,2,7,'11',1,'2026-06-21 19:14:49'),(5,2,7,'1',1,'2026-06-21 19:14:49'),(6,2,7,'1',1,'2026-06-21 19:14:49'),(7,2,7,'1',1,'2026-06-21 19:14:50'),(8,2,7,'1',1,'2026-06-21 19:14:50'),(9,2,7,'1',1,'2026-06-21 19:14:50'),(10,2,7,'1',1,'2026-06-21 19:14:50'),(11,2,7,'1',1,'2026-06-21 19:14:50'),(12,2,7,'1',1,'2026-06-21 19:14:50'),(13,2,7,'1',1,'2026-06-21 19:14:50'),(14,2,7,'1',1,'2026-06-21 19:14:51'),(15,2,7,'1',1,'2026-06-21 19:14:51'),(16,2,7,'1',1,'2026-06-21 19:14:51'),(17,2,7,'1',1,'2026-06-21 19:14:51'),(18,2,7,'1',1,'2026-06-21 19:14:51'),(19,2,7,'1',1,'2026-06-21 19:14:51'),(20,2,2,'11',1,'2026-06-21 19:15:53'),(21,2,2,'1',1,'2026-06-21 19:15:53'),(22,2,2,'1',1,'2026-06-21 19:15:54'),(23,2,2,'1',1,'2026-06-21 19:15:54'),(24,2,2,'1',1,'2026-06-21 19:15:54'),(25,2,2,'1',1,'2026-06-21 19:15:54'),(26,2,2,'1',1,'2026-06-21 19:15:54'),(27,2,2,'1',1,'2026-06-21 19:15:54'),(28,2,2,'1',1,'2026-06-21 19:15:54'),(29,2,2,'1',1,'2026-06-21 19:15:55'),(30,2,2,'11',1,'2026-06-21 19:15:55'),(31,2,2,'1',1,'2026-06-21 19:15:55'),(32,2,2,'1',1,'2026-06-21 19:15:55'),(33,2,7,'https://res.cloudinary.com/df8kviidh/image/upload/v1782043183/ershougo/dk0y3gunpssnvmizzufh.jpg',1,'2026-06-21 19:59:45'),(34,2,7,'https://res.cloudinary.com/df8kviidh/image/upload/v1782045574/ershougo/cvoozi9tsmlzd5rtvwh6.jpg',1,'2026-06-21 20:39:36'),(35,2,7,'https://res.cloudinary.com/df8kviidh/image/upload/v1782048025/ershougo/mcpobahsyaghtfwl3r2m.jpg',1,'2026-06-21 21:20:27'),(36,2,2,'123',1,'2026-06-21 21:22:55'),(37,2,7,'456',1,'2026-06-21 21:23:08');
 /*!40000 ALTER TABLE `chat_message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `chat_room` (
   `receiver_id` int NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`room_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `chat_room` (
 
 LOCK TABLES `chat_room` WRITE;
 /*!40000 ALTER TABLE `chat_room` DISABLE KEYS */;
-INSERT INTO `chat_room` VALUES (1,0,1,3,'2026-06-15 09:57:12'),(2,0,7,2,'2026-06-20 14:43:24'),(3,0,1,5,'2026-06-20 16:37:19'),(4,0,5,4,'2026-06-20 16:38:13'),(5,0,5,2,'2026-06-20 16:39:02'),(6,0,5,11,'2026-06-20 17:07:51'),(7,0,0,1,'2026-06-20 17:10:40');
+INSERT INTO `chat_room` VALUES (1,0,1,3,'2026-06-15 09:57:12'),(2,0,7,2,'2026-06-20 14:43:24'),(3,0,1,5,'2026-06-20 16:37:19'),(4,0,5,4,'2026-06-20 16:38:13'),(5,0,5,2,'2026-06-20 16:39:02'),(6,0,5,11,'2026-06-20 17:07:51'),(7,0,0,1,'2026-06-20 17:10:40'),(8,0,0,2,'2026-06-21 18:19:55'),(9,0,0,7,'2026-06-21 19:21:13'),(10,0,2,4,'2026-06-21 21:27:43');
 /*!40000 ALTER TABLE `chat_room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -426,4 +426,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-21 16:55:38
+-- Dump completed on 2026-06-21 21:39:16
